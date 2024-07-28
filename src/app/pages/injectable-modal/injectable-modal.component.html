@@ -1,0 +1,41 @@
+<div *ngIf=false style="width:500px">
+    <h2 mat-dialog-title>Show Names</h2>
+    <div mat-dialog-content>Hello {{ name }}</div>
+    <div mat-dialog-actions align="end">
+        <span>
+            <button type="button" mat-flat-button color="primary" [mat-dialog-close]="true">
+                Clear
+            </button>
+            <button type="button" mat-stroked-button color="primary" (click)="CloseDialog()">
+                Cancel
+            </button>
+        </span>
+    </div>
+</div>
+
+<div>
+    <div class="container-fluid" style="width: 550px;">
+        <div class="row"
+            style="padding-bottom: 5px;background-color: #1776b8;text-align: center;padding-top: 5px;font-weight: 600;color: white;">
+            LOCATION SELECTION
+        </div>
+        <div>
+            <div id="map" class="map" #mapElement>
+            </div>
+            <div id="popup" class="ol-popup">
+                <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+                <div id="popup-content"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <label style="margin: auto;">Latitude: "24°57'34.0"N" </label>
+                <label style="margin: auto;">Longitude: "46°42'09.0"E"</label>
+            </div>
+            <div class="col-4">
+                <button class="btn btn-primary" style="color: white;background-color: #1776b8;">Cancel</button>
+                <!-- <button class="btn btn-primary" style="color: white;background-color: #1776b8;">Select</button> -->
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+// @import 'ionicons/dist/scss/ionicons.scss';
+
+// @import url('https://fonts.googleapis.com/css?family=Roboto:%20wght@300;400;%20500;%20700;900&display=');
+  
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    font-family: sans-serif;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

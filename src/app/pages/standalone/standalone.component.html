@@ -1,0 +1,61 @@
+<p>standalone works!</p>
+
+<button (click)="toggle()">POPUP</button>
+
+<body>
+
+    <div class="w3-container">
+        <h2>W3.CSS Modal</h2>
+        <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Open
+            Modal</button>
+
+        <div id="id01" class="w3-modal">
+            <div class="w3-modal-content">
+                <div class="w3-container">
+                    <span onclick="document.getElementById('id01').style.display='none'"
+                        class="w3-button w3-display-topright">&times;</span>
+                    <p>Some text. Some text. Some text.</p>
+                    <p>Some text. Some text. Some text.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+
+
+<h1 (click)="closeViewer()">Stand alone component with csss</h1>
+
+
+<div *ngIf="modalcss" class="modal-dialog">
+    <div class="modal-content" style="width: 50%;height: 60%;">
+        <div class="modal-body" style="padding: 5px;border-radius: 0.3rem;">
+            <div>
+                <div class="row" style="display: flex;justify-content: center;cursor: pointer;" (click)="closeViewer()">
+                    <div class="col" title="click to close" size="4" class="closeTag">
+                        Click here to close
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div *ngIf="modalcss1" class="popup-dialog">
+    <div class="popup-content" style="width: 0%;height: 60%;">
+        <div class="popup-body" style="padding: 5px;border-radius: 0.3rem;">
+            <div>
+                <div class="row" style="display: flex;justify-content: center;cursor: pointer;" (click)="closeViewer()">
+                    <div class="col" title="click to close" size="4" class="closeTag">
+                        Click here to close
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

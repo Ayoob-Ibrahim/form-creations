@@ -1,0 +1,64 @@
+<div class="full-screen-div" style="background-color: #f0ebf8;">
+
+  <div style="display: flex;text-align: center;justify-content: center;margin-bottom: 20px;"
+    *ngFor="let items of dataArray;let i=index">
+    <div class="card" style="width: 60%;border-left: 4px solid purple;">
+      <div class="container">
+        <!-- FIRST COLUMNS WITH QUESTION AND DROP DOWN -->
+        <div class="row" style="margin-top: 20px;margin-bottom: 10px;">
+          <div class="col-9">
+            <input class="quesInp" matInput placeholder="ENTER LABEL VALUE" [(ngModel)]="items.question">
+          </div>
+          <div class="col-3">
+            <select class="form-select" (change)="inputSelection(items)" [(ngModel)]="items.type">
+              <option *ngFor="let item of dropDown" value="{{item}}">{{item}}</option>
+            </select>
+          </div>
+        </div>
+        <!-- SECOND ROW INPUT BOX -->
+        <div class="row" *ngIf="items.type=='Text Area' || 'InputBox' ">
+          <div class="col-12">
+            <input *ngIf="items.type=='InputBox'" class="quesans" matInput type="text" placeholder="Answer Field"
+              [(ngModel)]="items.answer">
+            <textarea *ngIf="items.type=='Text Area'" class="textareaclass" matInput type="text"
+              placeholder="Answer Field" [(ngModel)]="items.answer"> </textarea>
+          </div>
+        </div>
+        <!-- SECOND ROW RADIO BUTTON -->
+        <div class="row" *ngIf="items.type=='RadioButton'">
+          <div class="col-12" style="text-align: left;" *ngFor="let item of items.radioptions;let index=index">
+            <mat-radio-button checked><input class="radioInput" type="text" placeholder="Option {{index+1}}"
+                [(ngModel)]="items.radioptions[index].value"></mat-radio-button>
+          </div>
+          <div class="col-12" style="text-align: left;margin-top: 10px;">
+            <mat-radio-button checked> <button type="button" class="btn btn-link" (click)="addOption(items)">Add
+                Another</button></mat-radio-button>
+          </div>
+        </div>
+        <!-- SECOND ROW CHECK BOX -->
+        <div class="row" *ngIf="items.type=='checkBox'">
+          <div class="col-12" style="text-align: left;" *ngFor="let item of items.radioptions;let index=index">
+            <mat-checkbox aria-checked="true" checked>
+              <input class="radioInput" type="text" placeholder="Option {{index+1}}"
+                [(ngModel)]="items.radioptions[index].value">
+            </mat-checkbox>
+          </div>
+          <div class="col-12" style="text-align: left;margin-top: 10px;">
+            <mat-checkbox checked> <button type="button" class="btn btn-link" (click)="addOption(items)">Add
+                Another</button></mat-checkbox>
+          </div>
+        </div>
+      </div>
+      <!-- <h6 style="cursor: pointer;" (click)="clone(item,i)">clone</h6> -->
+    </div>
+  </div>
+  <div style="display: flex;justify-content: center;">
+    <div class="card" (dblclick)="cardAdd()" style="width: 60%;border-top: 4px solid #0ce3b5;">
+      <div class="container">
+        <div class="card-body" style="display: flex;justify-content: center;cursor: pointer;">
+          <h1>ADD</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,92 @@
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border-bottom: 2px solid;
+    outline: none;
+}
+
+.quesInp{
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border-bottom: 2px solid;
+    outline: none;
+    background-color: whitesmoke;
+}
+.quesInp:focus{
+    background-color: lightblue;
+    border-bottom: 2px solid red;
+}
+
+.quesans{
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border-bottom: 2px solid;
+    outline: none;
+}
+.quesans:focus{
+    // background-color: gray;
+    border-bottom: 2px solid purple;
+}
+
+.input-hover:hover {
+    border-bottom: 2px solid red;
+}
+
+.input-focused:focus {
+    background-color: lightblue;
+    /* Change the background color when focused */
+}
+
+.radioInput {
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    // border-bottom: 2px solid;
+    outline: none;
+
+}
+
+.radioInput:focus {
+    background-color: lightblue;
+    border-bottom: 2px solid red;
+    /* Change the background color when focused */
+}
+
+.textareaclass{
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border: 2px solid gray;
+    outline: none;
+    border-radius: 0.7rem;
+    background-color: whitesmoke;
+}
+
+.matQuesInp {
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border-bottom: 2px solid;
+    outline: none;
+    background-color: red;
+}
+
+.answerFiled {
+    border-bottom: 2px solid purple !important;
+}
+
+.input-hover-ques {
+    // width: 100%;
+    // padding: 12px 20px;
+    // border: none;
+    // border-bottom: 2px solid;
+    // outline: none;
+    border-bottom: 2px solid red !important;
+}
+
+.input-hover-ques:hover {
+    border-bottom: 2px solid red;
+}

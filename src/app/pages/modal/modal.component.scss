@@ -1,0 +1,50 @@
+.map {
+    // width: 80%;
+    height: 100px;
+}
+
+.modal-dialog {
+    text-align: -webkit-center;
+    display: block;
+    position: absolute;
+    left: 30%;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    padding-top: 100px;
+    -webkit-transition: 0.5s;
+    overflow: hidden !important;
+    transition: all 0.3s linear;
+    z-index: 10051;
+    -webkit-transition: -webkit-transform .3s ease-out;
+    -o-transition: -o-transform .3s ease-out;
+    transition: transform .3s ease-out;
+    -webkit-transform: translate(0, -25%);
+    -ms-transform: translate(0, -25%);
+    -o-transform: translate(0, -25%);
+    transform: translate(0, -25%);
+    transform: translate(0, 0);
+}
+
+ 
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #999;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 6px;
+    outline: 0;
+    -webkit-box-shadow: 0 3px 9px rgb(0 0 0 / 50%);
+    box-shadow: 0 3px 9px rgb(0 0 0 / 50%);
+}
+
+.modal-header {
+    min-height: 16.43px;
+    height: 45px;
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: rgb(218, 218, 218);
+}
